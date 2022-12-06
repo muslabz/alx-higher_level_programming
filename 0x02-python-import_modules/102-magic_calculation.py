@@ -11,5 +11,6 @@ def magic_calculation(a, b):
         return (c)
 
     else:
-        return(sub(a, b))
-
+        c = sub(a, b)
+         return c
+     
