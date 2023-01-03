@@ -10,9 +10,9 @@ class Rectangle:
         Args:
             width(int): Private attribute default 0
             height(int): Private attribute default 0
-    Raises:
-        TypeError:
-    """
+        Raises:
+            TypeError:
+        """
         self.width = width
         self.height = height
 
@@ -35,24 +35,14 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = value
 
-    @height.setter
-    def height(self, value):
-        """Private instance attribute."""
-        if not isinstance(value, int):
-            raise TypeError("height must be an integer")
-        if value < 0:
-            raise ValueError("height must be >= 0")
-        self.__height = value
-
-    def area(self):
-        """The area"""
-        return self.__width * self.__height
-
-    def perimeter(self):
-        """The perimeter"""
-        if self.__width == 0 or self.__height == 0:
-            return 0
-        return 2 * (self.__width + self.__height)
+        @height.setter
+        def height(self, value):
+            """Private instance attribute."""
+            if not isinstance(value, int):
+                raise TypeError("height must be an integer")
+            if value < 0:
+                raise ValueError("height must be >= 0")
+            self.__height = value
 
 
 
