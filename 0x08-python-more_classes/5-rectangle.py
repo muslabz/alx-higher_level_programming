@@ -1,11 +1,27 @@
 #!/usr/bin/python3
-"""Defines a Rectangle class."""
+"""
+Class Rectangle Empty
+"""
+
 
 class Rectangle:
-    """Represent a rectangle."""
+    """Class rectangle"""
     def __init__(self, width=0, height=0):
-        """Initialize a new Rectangle.
+        """The __init__ method of the class
         Args:
-            width (int): The width of the new rectangle.
-            height t
+            width(int): Private attribute default 0
+            height(int): Private attribute default 0
+        Raises:
+            TypeError:
+    """
+    self.width = width
+    self.height = height
+
+    @property
+    def width(self):
+        """"Private instance attribute."""
+        return self.__width
+
+    @property
+    def height(self):
 
