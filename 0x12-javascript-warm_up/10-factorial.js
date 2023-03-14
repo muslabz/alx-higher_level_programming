@@ -1,12 +1,6 @@
 #!/usr/bin/node
-function factorial (newVar) {
-  if (newVar <= 1 | !newVar) {
-    return 1;
-  } else {
-    return factorial(newVar - 1) * newVar;
-  }
+function factorial (num) {
+  return num === 0 || isNaN(num) ? 1 : num * factorial(num - 1);
 }
 
-const newVar = Number(process.argv[2]);
-
-console.log(factorial(newVar));
+console.log(factorial(Number(process.argv[2])));
